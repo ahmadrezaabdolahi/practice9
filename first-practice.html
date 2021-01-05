@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice1</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .parent{
+    width: 350px;
+    height: 250px;
+    text-align: center;
+    background: url("images/pic2.jpg") no-repeat center top;
+    background-size: cover;
+    line-height: 250px;
+    font-size: 40px;
+    margin: 90px auto;
+    position: relative;
+
+  }
+  .parent .solid-right {
+    width: 90%;
+    height: 80%;
+    background-color:transparent ;
+    top: 10%;
+    left:5%;
+    /* transform: scale(0); */
+    transform-origin: left top;
+    position: absolute;
+    border: 1.4px solid white;
+    border-left: none;
+    border-right: none;
+    transition: 1s;
+    transform: scaleX(0);
+    
+  }
+  .parent:hover > .solid-right {
+    transform: scaleX(1);
+
+  }
+.solid-up{
+  width: 80%;
+  height: 90%;
+  background-color: transparent;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  border: 1.4px solid white;
+  border-top: none;
+  border-bottom: none;
+transform: scaleY(0);
+transition: 1s;
+transform-origin:  center top;
+}
+.parent:hover > .solid-up{
+  transform: scaleY(1);
+
+}
+.glassy{
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  position:absolute;
+  background-color: rgba(0, 0, 0, 0.26);
+opacity: 0;
+transition: 1s;
+}
+.parent:hover > .glassy{
+  opacity: 1;
+}
+.parent h2 ,h3 {
+  width: 100%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  font-family: serif;
+  transition: 1s;
+}
+.parent h3 {
+color: black;
+margin-top: 20px;
+}
+.parent h2{
+  top: 0%;
+  left: 0%;
+  font-size: 30px;
+}
+.parent h3{
+  top: 10%;
+  left: 0;
+font-size: 20px;
+}
+.parent:hover h2 ,
+.parent:hover h3{
+  transform: translateY(5%);
+}
+</style>
+<body>
+  <div class="parent">
+    <div class="glassy"></div>
+    <div class="solid-right"></div>
+    <div class="solid-up"></div>
+    <h2>Welcome!</h2>
+    <h3>see and enjoy it !</h3>
+  </div>
+</body>
+</html>
